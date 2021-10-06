@@ -26,7 +26,7 @@ div.categorie{
 
 .contenu{
     background-color:white;
-    margin :20px 8px 20px 8px;
+    margin :30px 8px 40px 8px;
     padding : 20px 8px;
     padding-top:0px;
     box-shadow: 0px 0px 7px 7px #40404060;
@@ -94,7 +94,7 @@ table.infos td{
 }
 
 div.colonne{
-    width:45%;
+    width:100%;
     margin-top:20px;
 }
 
@@ -108,11 +108,6 @@ div.colonne h2{
 
 div.colonneIngredients{
     display:inline-block;
-    margin-right:10%;
-}
-
-div.colonneEtapes{
-    float:right;
 }
 
 div.ingredients p{
@@ -156,7 +151,9 @@ table.preparation td.etape_preparation{
 
 
 
-/* Styles pour l'ordinateur (écran>768px): */
+
+
+/* Styles pour l'ordinateur (écran<768px): */
 @media only screen and (min-width: 768px) {
 
     .contenu{
@@ -165,6 +162,7 @@ table.preparation td.etape_preparation{
         padding : 30px;
     }
 
+    /*Tableau infos dans l'image*/
     table.infos{
         height:80px; 
     }
@@ -177,4 +175,27 @@ table.preparation td.etape_preparation{
         font-size:14;
     }
 
+    /*Affichage des colonnes ingrédients et préparation côte à côte*/
+    div.colonne{
+        width:45%;
+    }
+    
+    div.colonneIngredients{
+        margin-right:10%;
+    }
+    
+    div.colonneEtapes{
+        float:right;
+    }
 }
+
+
+
+/* Styles pour l'ordinateur (écran>900px): */
+@media only screen and (min-width: 900px) {
+
+    .contenu{
+        margin-left:auto;
+        margin-right:auto;
+        width:645px;
+    }
